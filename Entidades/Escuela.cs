@@ -9,7 +9,7 @@ namespace CoreEscuela.Entidades
             set{ nombre = value ;}
         }
 
-
+    //hola mundo
 
         public int anoCreacion { get; set; }
         public int pais { get; set; }
