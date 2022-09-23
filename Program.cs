@@ -1,5 +1,6 @@
 ﻿using System;
 using CoreEscuela.Entidades;
+using static System.Console;
 
 namespace ETAPA1
 {
@@ -10,31 +11,41 @@ namespace ETAPA1
             Escuela  escuela = new Escuela("Platzi School" , "Colombia");
             escuela.TipoEscuela = TiposEscuela.PreEscolar;
             
-            Curso [] arrC  =  new Curso[3];
+            escuela.Cursos  =  new Curso[]{
+                new Curso(){
+                    Nombre = "101"
+                },
+                new Curso(){
+                    Nombre = "102"
+                },
+                new Curso(){
+                    Nombre = "103"
+                }
+            };
+            
 
-            arrC[0] = new Curso(){
-                Nombre = "101",
-            };
-            arrC[1] = new Curso(){
-                Nombre = "102",
-            };
-            arrC[2] = new Curso(){
-                Nombre = "103",
-            };
+            WriteLine(escuela.ToString());      
+            WriteLine("---------------------------------------------------------------------------");
 
-            Console.WriteLine(escuela.ToString());      
-            Console.WriteLine("---------------------------------------------------------------------------");      
-            ImprimirArreglo(arrC);
+            ImprimirArreglo(escuela);
             
             
         }
 
-        private static void ImprimirArreglo(Curso[] arrC)
+        private static void ImprimirArreglo(Escuela escuela)
         {
-            foreach (var item in arrC)
-            {
-                Console.WriteLine($" Curso 1 : {item.Nombre} ID : {item.UniqueId} " );    
+            WriteLine("Cursos de la Escuela");
+            WriteLine("-------------LISTA CURSOS--------------");
+
+            if( escuela?.Cursos != null){
+                foreach (var item in escuela.Cursos)
+                {
+                    WriteLine($"Nombre {item.Nombre} : {item.UniqueId} ");    
+                }
+            }else{
+                WriteLine(" NO HAY CURSOS ");
             }
+            
         }
     }
 }
