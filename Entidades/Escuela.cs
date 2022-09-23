@@ -20,11 +20,10 @@ namespace CoreEscuela.Entidades
         public Escuela (string nombre, string pais = "",  string ciudad = "" ) 
         { 
             (Nombre) = (nombre);
-          
         }
 
         public override string ToString(){
-            return "PAIS  {this.pais} Nombre "+ this.nombre +" TIPO "+ this.TipoEscuela;
+            return $"PAIS  {this.pais} Nombre "+ this.nombre +" TIPO "+ this.TipoEscuela;
         }
     }
 }

@@ -9,22 +9,32 @@ namespace ETAPA1
         {
             Escuela  escuela = new Escuela("Platzi School" , "Colombia");
             escuela.TipoEscuela = TiposEscuela.PreEscolar;
+            
+            Curso [] arrC  =  new Curso[3];
 
-            Curso curso1 = new Curso(){
+            arrC[0] = new Curso(){
                 Nombre = "101",
             };
-            Curso curso2 = new Curso(){
+            arrC[1] = new Curso(){
                 Nombre = "102",
             };
-            Curso curso3 = new Curso(){
+            arrC[2] = new Curso(){
                 Nombre = "103",
             };
-            
 
             Console.WriteLine(escuela.ToString());      
             Console.WriteLine("---------------------------------------------------------------------------");      
-            Console.WriteLine($" Curso 1 : {curso1.Nombre} ID : {curso1.UniqueId} " );
-            Console.WriteLine($" Curso 2 : {curso2.Nombre} ID : {curso2.UniqueId} " );
+            ImprimirArreglo(arrC);
+            
+            
+        }
+
+        private static void ImprimirArreglo(Curso[] arrC)
+        {
+            foreach (var item in arrC)
+            {
+                Console.WriteLine($" Curso 1 : {item.Nombre} ID : {item.UniqueId} " );    
+            }
         }
     }
 }

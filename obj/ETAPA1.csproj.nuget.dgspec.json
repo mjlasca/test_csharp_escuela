@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\J\\Desktop\\ETAPA1\\ETAPA1.csproj": {}
+    "D:\\mio-jmario\\PLATZI\\csharp\\test_csharp_escuela\\ETAPA1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\J\\Desktop\\ETAPA1\\ETAPA1.csproj": {
+    "D:\\mio-jmario\\PLATZI\\csharp\\test_csharp_escuela\\ETAPA1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\J\\Desktop\\ETAPA1\\ETAPA1.csproj",
+        "projectUniqueName": "D:\\mio-jmario\\PLATZI\\csharp\\test_csharp_escuela\\ETAPA1.csproj",
         "projectName": "ETAPA1",
-        "projectPath": "C:\\Users\\J\\Desktop\\ETAPA1\\ETAPA1.csproj",
-        "packagesPath": "C:\\Users\\J\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\J\\Desktop\\ETAPA1\\obj\\",
+        "projectPath": "D:\\mio-jmario\\PLATZI\\csharp\\test_csharp_escuela\\ETAPA1.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "D:\\mio-jmario\\PLATZI\\csharp\\test_csharp_escuela\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\J\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -43,7 +43,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.214\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
