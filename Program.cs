@@ -1,6 +1,7 @@
 ﻿using System;
 using CoreEscuela.Entidades;
 using static System.Console;
+using System.Collections.Generic;
 
 namespace ETAPA1
 {
@@ -10,29 +11,62 @@ namespace ETAPA1
         {
             Escuela  escuela = new Escuela("Platzi School" , "Colombia");
             escuela.TipoEscuela = TiposEscuela.PreEscolar;
-            
-            escuela.Cursos  =  new Curso[]{
+
+            escuela.Cursos = new List<Curso>(){
                 new Curso(){
-                    Nombre = "101"
+                    Nombre = "101",
+                    Jornada = TiposJornada.Mañana
                 },
                 new Curso(){
-                    Nombre = "102"
+                    Nombre = "201",
+                    Jornada = TiposJornada.Tarde
                 },
                 new Curso(){
-                    Nombre = "103"
+                    Nombre = "301",
+                    Jornada = TiposJornada.Noche
                 }
             };
+
+            escuela.Cursos.Add(
+                new Curso(){
+                    Nombre = "102",
+                    Jornada = TiposJornada.Mañana
+                }
+            );
+
+            var masCursos =  new List<Curso>(){
+                new Curso(){
+                    Nombre = "103",
+                    Jornada = TiposJornada.Mañana
+                },
+                new Curso(){
+                    Nombre = "302",
+                    Jornada = TiposJornada.Tarde
+                },
+                new Curso(){
+                    Nombre = "302",
+                    Jornada = TiposJornada.Noche
+                }
+            };
+
+
+            escuela.Cursos.AddRange(masCursos);
+            
+            ImprimirCursos(escuela);
+
+            escuela.Cursos.RemoveAll( (cur) => cur.Nombre == "302"  && cur.Jornada == TiposJornada.Tarde );
             
 
-            WriteLine(escuela.ToString());      
-            WriteLine("---------------------------------------------------------------------------");
+            WriteLine("\n----------------------------------------\n");
+            ImprimirCursos(escuela);
 
-            ImprimirArreglo(escuela);
+            
+
             
             
         }
 
-        private static void ImprimirArreglo(Escuela escuela)
+        private static void ImprimirCursos(Escuela escuela)
         {
             WriteLine("Cursos de la Escuela");
             WriteLine("-------------LISTA CURSOS--------------");
